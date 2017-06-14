@@ -1,0 +1,45 @@
+{% extends 'shop/base.html' %}
+
+{% load static %}
+
+{% load widget_tweaks %}
+{% load pagination_tags sorting_tags %}
+
+{% block title %}Страница товаров{% endblock %}
+
+{% block content %}
+<script type='text/javascript' src="{% static 'js/jquery.form.js' %}"></script>
+<script type='text/javascript' src="{% static 'js/main.js' %}"></script>
+  <div id="sidebar" class="col-sm-3">
+    <form action="" id="filter_form" method="get">
+      {{ filter.form.category.label_tag }}
+      {% render_field filter.form.category class="inp" %}
+      {{ filter.form.available.label_tag }}
+      {% render_field filter.form.available class="inp" %}
+      <input type="submit" value="Фильтр" id="submit" class="btn btn-primary"/>
+    </form>    
+  </div>
+  <div id="main" class="product_list col-sm-9">
+    <h1 style="">Товары</h1>
+    <p style="float: right;"><strong>Сортировать:</strong>  {% anchor price "Цена" %}</p>
+    <div class="items row">
+    {% autosort filter.qs as sorted_list %}
+      {% autopaginate sorted_list 9 as filter_list %}
+        {% for product in filter_list %}
+          <a href="{{ product.get_absolute_url }}">
+            <div class="item col-sm-4">
+              <div class="item_img">
+                <img src="{{ product.image.url }}" class="img-responsive">  
+              </div>
+              <strong>{{ product.name }}</strong><br>
+              {{ product.price }} грн.
+              {% if not product.available %}<p id='not_available'>Нет в наличии</p>{% endif %}
+            </div>
+          </a>
+        {% endfor %}
+    </div>
+    <div align="center">
+    {% paginate %}
+    </div>
+  </div>
+{% endblock %}

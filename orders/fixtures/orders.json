@@ -1,0 +1,167 @@
+[
+{
+  "model": "orders.order",
+  "pk": 1,
+  "fields": {
+    "first_name": "\u0410\u043b\u0435\u043a\u0441\u0435\u0439",
+    "last_name": "\u0421\u043b\u043e\u0431\u043e\u0434\u044e\u043a",
+    "email": "aslobodiuk@gmail.com",
+    "address": "\u0443\u043b.\u0429\u0443\u0441\u0435\u0432\u0430, 8\u0410",
+    "postal_code": "03465",
+    "city": "\u041a\u0438\u0435\u0432",
+    "created": "2017-05-29T21:26:50.744Z",
+    "updated": "2017-05-29T21:26:50.744Z",
+    "paid": false
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 2,
+  "fields": {
+    "first_name": "\u0418\u0432\u0430\u043d",
+    "last_name": "\u0418\u0432\u0430\u043d\u043e\u0432",
+    "email": "ivanov@gmail.com",
+    "address": "\u0443\u043b. \u041a\u0438\u0440\u043e\u0432\u0430, 143",
+    "postal_code": "05134",
+    "city": "\u0411\u0443\u0447\u0430",
+    "created": "2017-05-29T21:30:54.413Z",
+    "updated": "2017-05-29T21:30:54.413Z",
+    "paid": false
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 3,
+  "fields": {
+    "first_name": "\u0421\u0435\u0440\u0433\u0435\u0439",
+    "last_name": "\u0418\u0432\u0430\u043d\u043e\u0432",
+    "email": "serg@i.ua",
+    "address": "\u0443\u043b. \u041a\u0438\u0440\u043e\u0432\u0430, 142",
+    "postal_code": "03465",
+    "city": "\u041a\u0438\u0435\u0432",
+    "created": "2017-05-29T21:57:06.695Z",
+    "updated": "2017-05-29T21:57:06.695Z",
+    "paid": false
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 9,
+  "fields": {
+    "first_name": "\u041c\u0435\u0444\u043e\u0434\u0438\u0439",
+    "last_name": "\u041a\u0438\u0440\u0438\u043b\u043b",
+    "email": "kandm@gmail.com",
+    "address": "\u0443\u043b. \u0421\u0442\u0440\u043e\u0438\u0442\u0435\u043b\u0435\u0439, 2",
+    "postal_code": "03165",
+    "city": "\u041a\u0438\u0435\u0432",
+    "created": "2017-05-30T10:28:27.706Z",
+    "updated": "2017-05-30T10:28:27.707Z",
+    "paid": false
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 11,
+  "fields": {
+    "first_name": "\u0410\u043b\u0435\u043a\u0441\u0435\u0439",
+    "last_name": "\u0421\u043b\u043e\u0431\u043e\u0434\u044e\u043a",
+    "email": "aslobodiuk@gmail.com",
+    "address": "\u0443\u043b.\u0429\u0443\u0441\u0435\u0432\u0430, 8\u0410",
+    "postal_code": "03516",
+    "city": "\u041a\u0438\u0435\u0432",
+    "created": "2017-06-06T12:21:02.068Z",
+    "updated": "2017-06-06T12:21:02.068Z",
+    "paid": false
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 1,
+  "fields": {
+    "order": 1,
+    "product": 1,
+    "price": "2500.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 2,
+  "fields": {
+    "order": 1,
+    "product": 2,
+    "price": "10500.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 3,
+  "fields": {
+    "order": 2,
+    "product": 2,
+    "price": "10500.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 4,
+  "fields": {
+    "order": 3,
+    "product": 2,
+    "price": "10500.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 10,
+  "fields": {
+    "order": 9,
+    "product": 1,
+    "price": "2500.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 11,
+  "fields": {
+    "order": 9,
+    "product": 3,
+    "price": "20000.00",
+    "quantity": 4
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 12,
+  "fields": {
+    "order": 9,
+    "product": 2,
+    "price": "10500.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 18,
+  "fields": {
+    "order": 11,
+    "product": 7,
+    "price": "12000.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 19,
+  "fields": {
+    "order": 11,
+    "product": 6,
+    "price": "36000.00",
+    "quantity": 1
+  }
+}
+]
