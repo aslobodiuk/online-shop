@@ -74,12 +74,12 @@ class CartTestCase(TestCase):
     def test_add_method_with_one_product(self):
 
         product = Product.objects.first()
-        cnt1 = 3
+        cnt1 = 1
         cnt2 = 2
 
         """test with update_quantity = False"""
-        self.cart.add(product, cnt1)
-        self.cart.add(product, cnt2)
+        self.cart.add(product, cnt1, False)
+        self.cart.add(product, cnt2, False)
         self.assertEqual(len(self.cart), cnt1 + cnt2)
 
         """test with update_quantity = True"""
