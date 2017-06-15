@@ -6,6 +6,12 @@
   {{ product.name }}
 {% endblock %}
 {% block content %}
+<script type='text/javascript' src="{% static 'js/jquery.form.js' %}"></script>
+<script>
+  var stock = "{{product.stock}}";
+  var in_cart = "{{cart_quantity}}"
+</script>
+<script type='text/javascript' src="{% static 'js/detail.js' %}"></script>
   <div class="product-detail">
     <div class="col-sm-4"><img src="{{ product.image.url }}" class="img-responsive"></div>
     <div class="col-sm-8">
@@ -15,7 +21,7 @@
         {{ product.price }} грн.
       </p>
       {% if not product.available %}<p id='not_available'>Нет в наличии</p>{% endif %}
-      <form action="{% url "cart:CartAdd" product.id %}" method="POST">
+      <form action="{% url "cart:CartAdd" product.id %}" method="POST" id="add_to_cart">
         {{ cart_product_form }}
         {% csrf_token %} 
         <input type="submit" value="Добавить в корзину">

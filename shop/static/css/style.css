@@ -71,6 +71,11 @@ body{
   color:red;
 }
 
+#id_quantity{
+  text-align: center;
+  width: 70px;
+  border: thin solid;
+}
 .product-detail{
   margin-top: 40px;
 }

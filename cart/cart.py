@@ -43,8 +43,12 @@ class Cart(object):
 
         for item in self.cart.values():
             item['price'] = Decimal(item['price'])
+            item['quantity'] = item['quantity']
             item['total_price'] = item['price'] * item['quantity']
             yield item
+
+    def __getitem__(self, id):
+        return self.cart[str(id)]
 
     def __len__(self):
         return sum(item['quantity'] for item in self.cart.values())
